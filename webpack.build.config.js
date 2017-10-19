@@ -33,7 +33,7 @@ module.exports = {
                             loader: 'css-loader',
                             options: {
                                 importLoaders: 1,
-                                sourceMap: true,
+                                sourceMap: true, //оно должно быть в продакшене?
                                 ctx:  { modules: true, package: 'spa' }
                             },
                         },
@@ -45,13 +45,13 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['build']), // очистка директории
-        new HtmlWebpackPlugin({ // штука, чтобы присрать мой bundle.js в index.html
+        new HtmlWebpackPlugin({ // сам добавит bundle.js в index.html
             template: './src/index.html',
             title: 'Development',
             inject: 'body'
         }),
-        new ExtractTextPlugin('[name].bundle.css'), // штука, чтобы css не присерался инлайном в html
-    	new webpack.optimize.UglifyJsPlugin({ // шакалю js
+        new ExtractTextPlugin('[name].bundle.css'), // создаст файлы стилей вместо того, чтобы инлайном встроить их в html
+    	new webpack.optimize.UglifyJsPlugin({ // шакалит js
             sourceMap: true
         }),
         new webpack.DefinePlugin({

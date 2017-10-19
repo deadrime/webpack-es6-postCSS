@@ -48,12 +48,12 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['build']),
-        new HtmlWebpackPlugin({ // штука, чтобы присрать мой bundle.js в index.html
+        new HtmlWebpackPlugin({ // сам добавит bundle.js и стили в index.html
             template: './src/index.html',
             title: 'Development',
             inject: 'body'
         }),
-        new ExtractTextPlugin('[name].bundle.css'), // штука, чтобы css не присерался инлайном в html
+        new ExtractTextPlugin('[name].bundle.css'), // создаст файлы стилей вместо того, чтобы инлайном встроить их в html
         new webpack.DefinePlugin({ // как это работает?
             "process.env": {
                 NODE_ENV: JSON.stringify("development"),
