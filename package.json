@@ -1,13 +1,13 @@
 {
   "name": "webpack-ES6-postCSS",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple webpack config: babel, postCSS + cssNext, devServer, cssnano, UglifyJs",
   "main": "index.js",
   "scripts": {
     "dev": "set NODE_ENV=development&&webpack-dev-server --config webpack.dev.config.js",
     "build": "set NODE_ENV=production&&webpack --config webpack.build.config.js"
   },
-  "author": "",
+  "author": "Zhenya Trofimov (@deadrime)",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
