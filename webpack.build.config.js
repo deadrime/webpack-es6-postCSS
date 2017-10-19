@@ -26,7 +26,7 @@ module.exports = {
                 }]
             },
             { // css, postCss => css
-                test: /\.styl|.css$/,
+                test: /\.pcss|.css$/,
                 use: ExtractTextPlugin.extract({
                     use: [
                         {
