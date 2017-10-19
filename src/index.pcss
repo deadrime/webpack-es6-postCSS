@@ -1,0 +1,18 @@
+@import "normalize.css";
+
+:root {
+  --base-font-size: 16px;
+  --color-purple: #666EE8;
+  --color-black: #000;
+}
+
+html, body {
+  font-size: var(--base-font-size);
+}
+
+h1 {
+	color: var(--color-black);
+	& span {
+		color: var(--color-purple);
+	}
+}
