@@ -50,9 +50,9 @@ module.exports = {
             title: 'Development',
             inject: 'body'
         }),
-        new ExtractTextPlugin('[name].bundle.css'), // создаст файлы стилей вместо того, чтобы инлайном встроить их в html
+        new ExtractTextPlugin('[name].bundle.css'), // создаст файлы стилей и подключит, вместо того, чтобы инлайном встроить их
     	new webpack.optimize.UglifyJsPlugin({ // шакалит js
-            sourceMap: true
+            sourceMap: true // не уверен, что это тут нужно =/
         }),
         new webpack.DefinePlugin({
             "PRODUCTION": true,

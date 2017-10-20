@@ -1,6 +1,7 @@
 const devSettings = {
     plugins: {
         'postcss-import': {},
+        'postcss-nested' : {},
         'postcss-cssnext': {}
     },
     options: {
@@ -11,6 +12,7 @@ const devSettings = {
 const prodSettings = {
     plugins: {
         'postcss-import': {},
+        'postcss-nested' : {},
         'postcss-cssnext': {
             browsers: ['last 2 versions', '> 5%'],
         },
@@ -22,7 +24,6 @@ const prodSettings = {
 };
 
 module.exports = ctx => {
-    //console.log(PRODUCTION);
     return ctx.env === 'production' ? prodSettings : devSettings;
 };
 

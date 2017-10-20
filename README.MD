@@ -1,12 +1,15 @@
-# Базовая сборка webpack: 
-babel, postCSS + cssNext, devServer
+# Базовая сборка webpack 2: 
 
-Сжатие: cssnano, UglifyJs
+- ES6: babel на основе [babel-preset-env](https://github.com/babel/babel-preset-env)
 
-## Установка:
+- CSS: [PostCSS](https://github.com/postcss/postcss) на основе [cssNext](https://github.com/MoOx/postcss-cssnext) + [postcss-nested](https://github.com/postcss/postcss-nested)
+
+- Сжатие: [cssnano](https://github.com/ben-eb/cssnano)(входит в [postcss-loader](https://github.com/postcss/postcss-loader)), [UglifyJs](https://github.com/mishoo/UglifyJS)(Входит в сам вебпак)
+
+## Установка
 
 ```sh
-$ npm install
+$ npm i
 ```
 
 ## Запуск
@@ -16,7 +19,7 @@ $ npm run build
 ```
 
 ### Примечание
-Для линукса возможно нужно без set:
+Для линукса, возможно, нужно без set:
 ```
 set NODE_ENV=production
 ```
